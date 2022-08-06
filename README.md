@@ -3,15 +3,16 @@ Classe de conexão java criada com o padrão <ins>Static holder singleton patter
 
 # Beneficios
 
-<b>Static factory</b> - A boa prática é que se utilizarmos esta estratégia não deixemos que seja possível instanciar a classe pelo construtor , criando um construtor privado para a classe, desta forma apenas um método de dentro da classe pode instanciar-la.
+<li><b>Static factory</b> - A boa prática é que se utilizarmos esta estratégia não deixemos que seja possível instanciar a classe pelo construtor , criando um construtor privado para a classe, desta forma apenas um método de dentro da classe pode instanciar-la.</li>
 
-<b>Lazy initialization</b> - Garante que o recurso será apenas inicializado quando for utilizado .
+<li><b>Lazy initialization</b> - Garante que o recurso será apenas inicializado quando for utilizado .</li>
 
-<b>Thread safe</b> - mecanismos para garantir a ordem processamento de chamadas simultaneas ao mesmo metodo e evitar violação de  estado de uma classe.
+<li><b>Thread safe</b> - mecanismos para garantir a ordem processamento de chamadas simultaneas ao mesmo metodo e evitar violação de  estado de uma classe.</li>
 
 <h3>Classe principal</h3>
 
 <li>  contém um metodo de buscar a conexão do banco desejado aberto a extensão </li>
+<br/>
 
 ```
 public class DBConnection {
@@ -24,6 +25,7 @@ public class DBConnection {
 
 <h3>Classe secundária</h3>
 <li> Classe que será consumida podendo ser qualquer banco , mysql  , postsgres etc . </li>
+<br/>
 
 ```
 public class MysqlConnection {
